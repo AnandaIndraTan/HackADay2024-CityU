@@ -3,6 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundClip: ['text'],
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
@@ -44,24 +45,11 @@ module.exports = {
     },
     colors: {
       white: "#FFFFFF",
-      yellow: "#F9EC1F",
-      pastelyellow: "#FFFF99",
-      brown: "#DDAD42",
-      lightbrown: "#DDAD41",
-      blue: "#66CBEC",
-      lightblue: "#BBEEFF",
       black: "#000000",
-      lightgray: "#F2F2F2",
-      lightgreen:"#DCFFC0",
-      gray: "#C4C4C4",
-      mediumgray: "#6A6A6A",
-      buttonblack: "#25221B",
-      buttonblackhover: "#3b362b",
-      buttonyellow: "#FFFF99",
-      darkgray: "#1E201E",
-      grayinput: "#25221B",
-      pink: "#F9CECE",
-      green: "#DCFFC0"
+      violet: "#c4bffd",
+      purple: "#a78bfa",
+      pink: "#fdbff8",
+      darkpurple: "#9400d3",
     },
   },
   plugins: [],
