@@ -40,14 +40,12 @@ export const LinkDeviceButton = ({ onClick, isLinking }) => {
             // Request camera permission
             const stream = await navigator.mediaDevices.getUserMedia({ video: true });
             
-            // Stop the stream immediately - we just needed the permission
             stream.getTracks().forEach(track => track.stop());
             
             setIsLinked(!isLinked);
             onClick && onClick();
         } catch (error) {
             console.error('Camera permission denied:', error);
-            // Handle permission denial here
         }
     };
 
