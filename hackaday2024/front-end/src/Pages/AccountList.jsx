@@ -9,7 +9,7 @@ const Container = styled.div``;
 export default function AccountList() {
   return (
     <Container className="flex flex-col justify-between overflow scroll">
-        <AccountCard appName="Facebook.com" accName="test" password="password"/>
+        <AccountCard appName="Facebook.com" accName="test"/>
     </Container>
   );
 }
