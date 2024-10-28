@@ -3,33 +3,24 @@ import { useState, useEffect } from "react";
 import styled from 'styled-components';
 
 
-export const AccountCard = ({ onClick, appName, accName, password }) => {
+const Container = styled.div``;
+const Card = styled.div`
+    box-shadow: 0px 3px 10px rgba(36, 36, 10, 0.3);
+`;
+const AppName = styled.div`
+    font-weight: 500;
+`;
+const Infobox = styled.div``;
+
+export default function AccountCard ({ onClick, appName, accName, password }) {
     return (
-        <div 
-            onClick={onClick}
-            className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer border border-gray-200 max-w-sm mx-auto mb-4"
-        >
-            <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-gray-800">
-                        {appName}
-                    </h3>
-                </div>
-                
-                <div className="space-y-1">
-                    <div className="flex items-center text-gray-600">
-                        <span className="font-medium w-24">Account:</span>
-                        <span className="truncate">{accName}</span>
-                    </div>
-                    
-                    <div className="flex items-center text-gray-600">
-                        <span className="font-medium w-24">Password:</span>
-                        <span className="truncate">
-                            {password ? '••••••••' : 'No password'}
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Container className="flex justify-center items-center">
+            <Card className="flex flex-col w-80 h-40 rounded-lg p-5 m-5">
+                <AppName>{appName}</AppName>
+                <Infobox className="bg-gray w-10 h-10">
+
+                </Infobox>
+            </Card>
+        </Container>
     );
 };
